@@ -24,36 +24,19 @@ requestAnimationFrame(raf)
 
 gsap.registerPlugin(ScrollTrigger)
 
-// const scrollItems = gsap.utils.toArray('.scroll-item')
-// scrollItems.forEach((item) => {
-//   gsap.to(item, {
-//     xPercent: -200,
-//     scrollTrigger: {
-//       start: 'top 0.05%',
-//       trigger: item,
-//       scrub: true,
-//     },
-//   })
-// })
 const projectTriggers = document.querySelectorAll('.container')
 
 projectTriggers.forEach(addTimeline)
 
 function addTimeline(project) {
-  const images = project.querySelectorAll('.scroll-item')
-  const title = project.querySelectorAll('.title-item')
+  const images = project.querySelectorAll('.lightbox-link')
   gsap
     .timeline({
       scrollTrigger: {
         trigger: project,
-        start: 'top bottom',
+        start: 'top +1950',
         scrub: true,
       },
     })
-    .to(title, {
-      x: -500,
-    })
-    .to(images, {
-      xPercent: -150,
-    })
+    .fromTo(images, { scale: 0.5 }, { scale: 1.005 })
 }
