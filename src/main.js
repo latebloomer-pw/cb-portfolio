@@ -29,7 +29,7 @@ const projectTriggers = document.querySelectorAll('.container')
 projectTriggers.forEach(addTimeline)
 
 function addTimeline(project) {
-  const images = project.querySelectorAll('.lightbox-link')
+  const images = project.querySelectorAll('.scroll-anim')
   gsap
     .timeline({
       scrollTrigger: {
