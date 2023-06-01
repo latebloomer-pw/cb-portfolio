@@ -38,5 +38,5 @@ function addTimeline(project) {
         scrub: true,
       },
     })
-    .fromTo(images, { scale: 0.5 }, { scale: 1.005 })
+    .fromTo(images, { scale: 0.5 }, { scale: 1.0075 })
 }
