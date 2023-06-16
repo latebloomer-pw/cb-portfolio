@@ -26,4 +26,13 @@ html.lenis {
 
 * {
   user-select: none;
+  user-select: none;
+  -webkit-user-select: none;
+  /*Safari*/
+  -moz-user-select: none;
+  /*Firefox*/
+}
+
+a.w--current {
+  padding-right: 0px;
 }
